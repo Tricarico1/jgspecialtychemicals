@@ -303,12 +303,16 @@ export default function Home() {
 
             {/* Map */}
             <div className="relative h-80 rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src="https://ext.same-assets.com/1812289277/2526197897.png"
-                alt="Map location"
-                fill
-                className="object-cover"
-              />
+              <iframe
+                title="J&G Specialty Chemicals Location"
+                src="https://www.google.com/maps?q=4300+Danor+Drive,+Reading,+Pennsylvania+19605,+United+States&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, width: '100%', height: '100%' }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>
