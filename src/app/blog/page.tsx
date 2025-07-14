@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ChevronDown, Menu } from "lucide-react";
+import Link from "next/link";
 
 export default function BlogPage() {
   return (
@@ -25,15 +26,15 @@ export default function BlogPage() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="/" className="text-gray-700 hover:text-gray-900 font-medium">
+              <Link href="/" className="text-gray-700 hover:text-gray-900 font-medium">
                 Home
-              </a>
-              <a href="/about" className="text-gray-700 hover:text-gray-900 font-medium">
+              </Link>
+              <Link href="/about" className="text-gray-700 hover:text-gray-900 font-medium">
                 About
-              </a>
-              <a href="/blog" className="text-gray-700 hover:text-gray-900 font-medium border-b-2 border-yellow-400">
+              </Link>
+              <Link href="/blog" className="text-gray-700 hover:text-gray-900 font-medium border-b-2 border-yellow-400">
                 J&G Blog
-              </a>
+              </Link>
               <div className="relative group">
                 <button className="flex items-center text-gray-700 hover:text-gray-900 font-medium">
                   Solutions
@@ -41,18 +42,18 @@ export default function BlogPage() {
                 </button>
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                   <div className="py-2">
-                    <a href="/solutions/industrial-wastewater" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                    <Link href="/solutions/industrial-wastewater" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
                       Industrial Wastewater
-                    </a>
-                    <a href="/solutions/municipal-wastewater" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                    </Link>
+                    <Link href="/solutions/municipal-wastewater" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
                       Municipal Wastewater
-                    </a>
-                    <a href="/solutions/treatment-chemicals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                    </Link>
+                    <Link href="/solutions/treatment-chemicals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
                       Treatment Chemicals
-                    </a>
-                    <a href="/solutions/pump-station-maintenance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                    </Link>
+                    <Link href="/solutions/pump-station-maintenance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
                       Pump Station Maintenance
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -61,7 +62,7 @@ export default function BlogPage() {
             {/* Contact Button & Mobile Menu */}
             <div className="flex items-center space-x-4">
               <Button asChild className="primary-gold rounded-full px-6 py-2 font-medium hidden sm:block">
-                <a href="/#contact">Contact Us</a>
+                <Link href="/#contact">Contact Us</Link>
               </Button>
 
               {/* Mobile Navigation */}
@@ -73,34 +74,34 @@ export default function BlogPage() {
                 </SheetTrigger>
                 <SheetContent side="right" className="w-80">
                   <div className="flex flex-col space-y-6 mt-8">
-                    <a href="/" className="text-gray-700 hover:text-gray-900 font-medium text-lg">
+                    <Link href="/" className="text-gray-700 hover:text-gray-900 font-medium text-lg">
                       Home
-                    </a>
-                    <a href="/about" className="text-gray-700 hover:text-gray-900 font-medium text-lg">
+                    </Link>
+                    <Link href="/about" className="text-gray-700 hover:text-gray-900 font-medium text-lg">
                       About
-                    </a>
-                    <a href="/blog" className="text-gray-700 hover:text-gray-900 font-medium text-lg text-yellow-600">
+                    </Link>
+                    <Link href="/blog" className="text-gray-700 hover:text-gray-900 font-medium text-lg text-yellow-600">
                       J&G Blog
-                    </a>
+                    </Link>
                     <div className="space-y-2">
                       <p className="text-gray-700 font-medium text-lg">Solutions</p>
                       <div className="pl-4 space-y-2">
-                        <a href="/solutions/industrial-wastewater" className="block text-gray-600 hover:text-gray-900">
+                        <Link href="/solutions/industrial-wastewater" className="block text-gray-600 hover:text-gray-900">
                           Industrial Wastewater
-                        </a>
-                        <a href="/solutions/municipal-wastewater" className="block text-gray-600 hover:text-gray-900">
+                        </Link>
+                        <Link href="/solutions/municipal-wastewater" className="block text-gray-600 hover:text-gray-900">
                           Municipal Wastewater
-                        </a>
-                        <a href="/solutions/treatment-chemicals" className="block text-gray-600 hover:text-gray-900">
+                        </Link>
+                        <Link href="/solutions/treatment-chemicals" className="block text-gray-600 hover:text-gray-900">
                           Treatment Chemicals
-                        </a>
-                        <a href="/solutions/pump-station-maintenance" className="block text-gray-600 hover:text-gray-900">
+                        </Link>
+                        <Link href="/solutions/pump-station-maintenance" className="block text-gray-600 hover:text-gray-900">
                           Pump Station Maintenance
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <Button asChild className="primary-gold rounded-full px-6 py-2 font-medium w-full">
-                      <a href="/#contact">Contact Us</a>
+                      <Link href="/#contact">Contact Us</Link>
                     </Button>
                   </div>
                 </SheetContent>
@@ -138,7 +139,7 @@ export default function BlogPage() {
                 <h2 className="text-lg font-bold text-gray-900 mb-2 heading-font">Filaments, What to Do?</h2>
                 <p className="text-gray-600 body-font text-sm mb-4 flex-1">Filamentous Bacteria As is the case with any group of microorganism populations, the relative proportion…</p>
                 <Button asChild className="primary-gold rounded-full px-6 py-2 font-medium self-start">
-                  <a href="/blog/filaments-what-to-do">Read More</a>
+                  <Link href="/blog/filaments-what-to-do">Read More</Link>
                 </Button>
               </div>
             </div>
@@ -149,7 +150,7 @@ export default function BlogPage() {
                 <h2 className="text-lg font-bold text-gray-900 mb-2 heading-font">Settleability, Problem or Not?</h2>
                 <p className="text-gray-600 body-font text-sm mb-4 flex-1">Settleability Test – Interpretation One of the most useful and easy tests for operators to…</p>
                 <Button asChild className="primary-gold rounded-full px-6 py-2 font-medium self-start">
-                  <a href="/blog/settleability-problem-or-not">Read More</a>
+                  <Link href="/blog/settleability-problem-or-not">Read More</Link>
                 </Button>
               </div>
             </div>
@@ -160,7 +161,7 @@ export default function BlogPage() {
                 <h2 className="text-lg font-bold text-gray-900 mb-2 heading-font">Nitrification – What's Needed?</h2>
                 <p className="text-gray-600 body-font text-sm mb-4 flex-1">Nitrification is the biological oxidation of ammonia nitrogen to nitrate and accounts for most ammonia…</p>
                 <Button asChild className="primary-gold rounded-full px-6 py-2 font-medium self-start">
-                  <a href="/blog/nitrification-whats-needed">Read More</a>
+                  <Link href="/blog/nitrification-whats-needed">Read More</Link>
                 </Button>
               </div>
             </div>
@@ -171,7 +172,7 @@ export default function BlogPage() {
                 <h2 className="text-lg font-bold text-gray-900 mb-2 heading-font">Present Issues, Are Operators a Shrinking Resource?</h2>
                 <p className="text-gray-600 body-font text-sm mb-4 flex-1">Compliance · Increased and expanding regulations (EPA and state) · Nutrient removal (improved operations typically…</p>
                 <Button asChild className="primary-gold rounded-full px-6 py-2 font-medium self-start">
-                  <a href="/blog/present-issues-are-operators-a-shrinking-resource">Read More</a>
+                  <Link href="/blog/present-issues-are-operators-a-shrinking-resource">Read More</Link>
                 </Button>
               </div>
             </div>
@@ -182,7 +183,7 @@ export default function BlogPage() {
                 <h2 className="text-lg font-bold text-gray-900 mb-2 heading-font">De-Nitrification, Only after Nitrification</h2>
                 <p className="text-gray-600 body-font text-sm mb-4 flex-1">De-nitrification is when facultative (common) treatment bacteria change nitrate (NO3) to (nitrogen gas (N), carbon…</p>
                 <Button asChild className="primary-gold rounded-full px-6 py-2 font-medium self-start">
-                  <a href="/blog/de-nitrification-only-after-nitrification">Read More</a>
+                  <Link href="/blog/de-nitrification-only-after-nitrification">Read More</Link>
                 </Button>
               </div>
             </div>
@@ -193,7 +194,7 @@ export default function BlogPage() {
                 <h2 className="text-lg font-bold text-gray-900 mb-2 heading-font">Knowing Your System, Nitrification as an Indicator?</h2>
                 <p className="text-gray-600 body-font text-sm mb-4 flex-1">Effective operation of your system begins with knowing your system. While two systems may be…</p>
                 <Button asChild className="primary-gold rounded-full px-6 py-2 font-medium self-start">
-                  <a href="/blog/knowing-your-system-nitrification-as-an-indicator">Read More</a>
+                  <Link href="/blog/knowing-your-system-nitrification-as-an-indicator">Read More</Link>
                 </Button>
               </div>
             </div>
@@ -208,7 +209,7 @@ export default function BlogPage() {
             Need Expert Water Treatment Guidance?
           </h2>
           <Button asChild className="primary-gold rounded-full px-8 py-3 text-lg font-medium">
-            <a href="/#contact">Contact Our Experts</a>
+            <Link href="/#contact">Contact Our Experts</Link>
           </Button>
         </div>
       </section>

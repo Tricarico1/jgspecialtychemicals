@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function NitrificationWhatsNeeded() {
   return (
@@ -172,10 +173,10 @@ export default function NitrificationWhatsNeeded() {
       {/* Navigation */}
       <div className="flex justify-between items-center mt-12 mb-8 text-base text-gray-600">
         <Button asChild variant="outline" className="rounded-full px-6 py-2 font-medium">
-          <a href="/blog/settleability-problem-or-not">&larr; Previous Post</a>
+          <Link href="/blog/settleability-problem-or-not">&larr; Previous Post</Link>
         </Button>
         <Button asChild variant="outline" className="rounded-full px-6 py-2 font-medium">
-          <a href="/blog/present-issues-are-operators-a-shrinking-resource">Next Post &rarr;</a>
+          <Link href="/blog/present-issues-are-operators-a-shrinking-resource">Next Post &rarr;</Link>
         </Button>
       </div>
       {/* Leave a Comment */}

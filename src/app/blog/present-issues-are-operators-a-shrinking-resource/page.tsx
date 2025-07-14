@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function PresentIssuesAreOperatorsAShrinkingResource() {
   return (
@@ -182,10 +183,10 @@ export default function PresentIssuesAreOperatorsAShrinkingResource() {
       {/* Navigation */}
       <div className="flex justify-between items-center mt-12 mb-8 text-base text-gray-600">
         <Button asChild variant="outline" className="rounded-full px-6 py-2 font-medium">
-          <a href="/blog/nitrification-whats-needed">&larr; Previous Post</a>
+          <Link href="/blog/nitrification-whats-needed">&larr; Previous Post</Link>
         </Button>
         <Button asChild variant="outline" className="rounded-full px-6 py-2 font-medium">
-          <a href="/blog/de-nitrification-only-after-nitrification">Next Post &rarr;</a>
+          <Link href="/blog/de-nitrification-only-after-nitrification">Next Post &rarr;</Link>
         </Button>
       </div>
       {/* Leave a Comment */}

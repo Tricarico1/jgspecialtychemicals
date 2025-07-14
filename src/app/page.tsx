@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -25,7 +26,7 @@ export default function Home() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <a href="/">
+              <Link href="/">
                 <Image
                   src="https://ext.same-assets.com/1812289277/320265055.png"
                   alt="J&G Specialty Chemicals"
@@ -33,20 +34,20 @@ export default function Home() {
                   height={60}
                   className="h-12 w-auto"
                 />
-              </a>
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="/" className="text-gray-700 hover:text-gray-900 font-medium">
+              <Link href="/" className="text-gray-700 hover:text-gray-900 font-medium">
                 Home
-              </a>
-              <a href="/about" className="text-gray-700 hover:text-gray-900 font-medium">
+              </Link>
+              <Link href="/about" className="text-gray-700 hover:text-gray-900 font-medium">
                 About
-              </a>
-              <a href="/blog" className="text-gray-700 hover:text-gray-900 font-medium">
+              </Link>
+              <Link href="/blog" className="text-gray-700 hover:text-gray-900 font-medium">
                 J&G Blog
-              </a>
+              </Link>
               <div className="relative group">
                 <button className="flex items-center text-gray-700 hover:text-gray-900 font-medium">
                   Solutions
@@ -54,18 +55,18 @@ export default function Home() {
                 </button>
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                   <div className="py-2">
-                    <a href="/solutions/industrial-wastewater" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                    <Link href="/solutions/industrial-wastewater" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
                       Industrial Wastewater
-                    </a>
-                    <a href="/solutions/municipal-wastewater" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                    </Link>
+                    <Link href="/solutions/municipal-wastewater" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
                       Municipal Wastewater
-                    </a>
-                    <a href="/solutions/treatment-chemicals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                    </Link>
+                    <Link href="/solutions/treatment-chemicals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
                       Treatment Chemicals
-                    </a>
-                    <a href="/solutions/pump-station-maintenance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                    </Link>
+                    <Link href="/solutions/pump-station-maintenance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
                       Pump Station Maintenance
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -74,7 +75,7 @@ export default function Home() {
             {/* Contact Button & Mobile Menu */}
             <div className="flex items-center space-x-4">
               <Button asChild className="primary-gold rounded-full px-6 py-2 font-medium hidden sm:block">
-                <a href="#contact">Contact Us</a>
+                <Link href="#contact">Contact Us</Link>
               </Button>
 
               {/* Mobile Navigation */}
@@ -86,34 +87,34 @@ export default function Home() {
                 </SheetTrigger>
                 <SheetContent side="right" className="w-80">
                   <div className="flex flex-col space-y-6 mt-8">
-                    <a href="/" className="text-gray-700 hover:text-gray-900 font-medium text-lg">
+                    <Link href="/" className="text-gray-700 hover:text-gray-900 font-medium text-lg">
                       Home
-                    </a>
-                    <a href="/about" className="text-gray-700 hover:text-gray-900 font-medium text-lg">
+                    </Link>
+                    <Link href="/about" className="text-gray-700 hover:text-gray-900 font-medium text-lg">
                       About
-                    </a>
-                    <a href="/blog" className="text-gray-700 hover:text-gray-900 font-medium text-lg">
+                    </Link>
+                    <Link href="/blog" className="text-gray-700 hover:text-gray-900 font-medium text-lg">
                       J&G Blog
-                    </a>
+                    </Link>
                     <div className="space-y-2">
                       <p className="text-gray-700 font-medium text-lg">Solutions</p>
                       <div className="pl-4 space-y-2">
-                        <a href="/solutions/industrial-wastewater" className="block text-gray-600 hover:text-gray-900">
+                        <Link href="/solutions/industrial-wastewater" className="block text-gray-600 hover:text-gray-900">
                           Industrial Wastewater
-                        </a>
-                        <a href="/solutions/municipal-wastewater" className="block text-gray-600 hover:text-gray-900">
+                        </Link>
+                        <Link href="/solutions/municipal-wastewater" className="block text-gray-600 hover:text-gray-900">
                           Municipal Wastewater
-                        </a>
-                        <a href="/solutions/treatment-chemicals" className="block text-gray-600 hover:text-gray-900">
+                        </Link>
+                        <Link href="/solutions/treatment-chemicals" className="block text-gray-600 hover:text-gray-900">
                           Treatment Chemicals
-                        </a>
-                        <a href="/solutions/pump-station-maintenance" className="block text-gray-600 hover:text-gray-900">
+                        </Link>
+                        <Link href="/solutions/pump-station-maintenance" className="block text-gray-600 hover:text-gray-900">
                           Pump Station Maintenance
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <Button asChild className="primary-gold rounded-full px-6 py-2 font-medium w-full">
-                      <a href="#contact">Contact Us</a>
+                      <Link href="#contact">Contact Us</Link>
                     </Button>
                   </div>
                 </SheetContent>
@@ -141,7 +142,7 @@ export default function Home() {
             J&G SPECIALTY<br />CHEMICALS
           </h1>
           <Button asChild className="primary-gold rounded-full px-8 py-3 text-lg font-medium">
-            <a href="#services">Learn More</a>
+            <Link href="#services">Learn More</Link>
           </Button>
         </div>
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
@@ -252,7 +253,7 @@ export default function Home() {
             Need Help with Easier Solutions? We Are Experts!
           </h2>
           <Button asChild className="primary-gold rounded-full px-8 py-3 text-lg font-medium">
-            <a href="#contact">Contact Us</a>
+            <Link href="#contact">Contact Us</Link>
           </Button>
         </div>
       </section>
