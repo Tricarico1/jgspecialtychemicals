@@ -13,7 +13,7 @@ export default function TreatmentChemicalsPage() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <a href="/">
+              <Link href="/">
                 <Image
                   src="https://ext.same-assets.com/1812289277/320265055.png"
                   alt="J&G Specialty Chemicals"
@@ -21,7 +21,7 @@ export default function TreatmentChemicalsPage() {
                   height={60}
                   className="h-12 w-auto"
                 />
-              </a>
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
