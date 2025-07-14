@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -5,8 +7,16 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ChevronDown, MapPin, Mail, Phone, Menu } from "lucide-react";
+import { useState } from "react";
 
 export default function Home() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<null | "success" | "error">(null);
+  const [submitting, setSubmitting] = useState(false);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -311,7 +321,30 @@ export default function Home() {
             <div className="w-16 h-1 bg-yellow-400 mx-auto mt-4"></div>
           </div>
 
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={async (e) => {
+            e.preventDefault();
+            setStatus(null);
+            setSubmitting(true);
+            try {
+              const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, email, subject, message }),
+              });
+              if (res.ok) {
+                setStatus("success");
+                setName("");
+                setEmail("");
+                setSubject("");
+                setMessage("");
+              } else {
+                setStatus("error");
+              }
+            } catch {
+              setStatus("error");
+            }
+            setSubmitting(false);
+          }}>
             <div>
               <label className="block text-sm font-medium mb-2 body-font">
                 Your name
@@ -320,6 +353,9 @@ export default function Home() {
                 type="text"
                 className="w-full bg-white border-0 rounded-none h-12"
                 placeholder=""
+                value={name}
+                onChange={e => setName(e.target.value)}
+                required
               />
             </div>
 
@@ -331,6 +367,9 @@ export default function Home() {
                 type="email"
                 className="w-full bg-white border-0 rounded-none h-12"
                 placeholder=""
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                required
               />
             </div>
 
@@ -342,6 +381,9 @@ export default function Home() {
                 type="text"
                 className="w-full bg-white border-0 rounded-none h-12"
                 placeholder=""
+                value={subject}
+                onChange={e => setSubject(e.target.value)}
+                required
               />
             </div>
 
@@ -352,12 +394,21 @@ export default function Home() {
               <Textarea
                 className="w-full bg-white border-0 rounded-none min-h-32"
                 placeholder=""
+                value={message}
+                onChange={e => setMessage(e.target.value)}
               />
             </div>
 
+            {status === "success" && (
+              <div className="text-green-500 font-medium">Message sent successfully!</div>
+            )}
+            {status === "error" && (
+              <div className="text-red-500 font-medium">Failed to send message. Please try again.</div>
+            )}
+
             <div className="text-left">
-              <Button className="primary-gold rounded-full px-8 py-3 font-medium">
-                Submit
+              <Button className="primary-gold rounded-full px-8 py-3 font-medium" type="submit" disabled={submitting}>
+                {submitting ? "Sending..." : "Submit"}
               </Button>
             </div>
           </form>

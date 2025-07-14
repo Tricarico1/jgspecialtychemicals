@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ChevronDown, Menu } from "lucide-react";
 
-export default function AboutPage() {
+export default function BlogPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -28,10 +28,10 @@ export default function AboutPage() {
               <a href="/" className="text-gray-700 hover:text-gray-900 font-medium">
                 Home
               </a>
-              <a href="/about" className="text-gray-700 hover:text-gray-900 font-medium border-b-2 border-yellow-400">
+              <a href="/about" className="text-gray-700 hover:text-gray-900 font-medium">
                 About
               </a>
-              <a href="/blog" className="text-gray-700 hover:text-gray-900 font-medium">
+              <a href="/blog" className="text-gray-700 hover:text-gray-900 font-medium border-b-2 border-yellow-400">
                 J&G Blog
               </a>
               <div className="relative group">
@@ -76,10 +76,10 @@ export default function AboutPage() {
                     <a href="/" className="text-gray-700 hover:text-gray-900 font-medium text-lg">
                       Home
                     </a>
-                    <a href="/about" className="text-gray-700 hover:text-gray-900 font-medium text-lg text-yellow-600">
+                    <a href="/about" className="text-gray-700 hover:text-gray-900 font-medium text-lg">
                       About
                     </a>
-                    <a href="/blog" className="text-gray-700 hover:text-gray-900 font-medium text-lg">
+                    <a href="/blog" className="text-gray-700 hover:text-gray-900 font-medium text-lg text-yellow-600">
                       J&G Blog
                     </a>
                     <div className="space-y-2">
@@ -114,7 +114,7 @@ export default function AboutPage() {
       <section className="relative h-96 flex items-center justify-center text-center text-white overflow-hidden">
         <Image
           src="https://ext.same-assets.com/1812289277/3793900429.jpeg"
-          alt="About Us - Nature Background"
+          alt="J&G Blog - Water Treatment Insights"
           fill
           className="object-cover object-center"
           priority
@@ -122,90 +122,80 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10">
           <h1 className="text-5xl md:text-6xl font-bold heading-font">
-            ABOUT US
+            WATER BLOGGED<br />JOURNAL
           </h1>
         </div>
       </section>
 
-      {/* Content Section */}
+      {/* Blog Posts Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <p className="text-sm text-gray-600 mb-4 body-font">High Quality Tactical Solutions</p>
-              <h2 className="text-4xl font-bold text-gray-900 mb-8 heading-font">
-                Finding A Permanent Solution Is Our Ultimate Goal!
-              </h2>
-
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6 heading-font">
-                Since 2005, Our Team Has Succeeded In Understanding The Needs Of The Industry
-              </h3>
-
-              <p className="text-gray-600 body-font leading-relaxed">
-                In the Berks and Lehigh County areas, we have earned a reputation as a prominent
-                local leader by providing top-quality chemicals to previously underserved utilities
-                and industries, all while maintaining a cost-effective approach. However, it is
-                important to note that the cornerstone of our success lies in the trust and
-                recommendations of our satisfied clients, as a substantial portion of our business
-                originates from referrals.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <p className="text-sm text-gray-600 mb-4 body-font">Some Cool Facts</p>
-              <h3 className="text-3xl font-bold text-gray-900 mb-8 heading-font">
-                Numbers Speak For Themselves
-              </h3>
-
-              <div className="grid grid-cols-2 gap-8">
-                <div className="text-center">
-                  <div className="text-6xl font-bold text-gray-700 mb-2">50</div>
-                  <p className="text-gray-600 body-font">Products</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-6xl font-bold text-gray-700 mb-2">18</div>
-                  <p className="text-gray-600 body-font">Years of<br />Experience</p>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Blog Post 1 */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+              <Image src="/1.png" alt="Filaments, What to Do?" width={600} height={300} className="w-full h-48 object-cover" />
+              <div className="flex-1 flex flex-col p-6">
+                <h2 className="text-lg font-bold text-gray-900 mb-2 heading-font">Filaments, What to Do?</h2>
+                <p className="text-gray-600 body-font text-sm mb-4 flex-1">Filamentous Bacteria As is the case with any group of microorganism populations, the relative proportion…</p>
+                <Button asChild className="primary-gold rounded-full px-6 py-2 font-medium self-start">
+                  <a href="/blog/filaments-what-to-do">Read More</a>
+                </Button>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Quality Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12 heading-font">
-            Quality Comes First! We Make Sure That Every Detail Is Looked Into, Even The
-            Smallest Product. Our Focus Is 100% On Client Needs And Satisfaction.
-          </h2>
-
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 heading-font">
-                Quality Unsurpassed
-              </h3>
-              <p className="text-gray-600 body-font leading-relaxed">
-                Our journey began in an era when only customers making large-scale purchases
-                received adequate service, including chemical delivery. Smaller orders were often
-                overlooked by suppliers who deemed the profit margins insufficient to warrant their
-                attention. During that time, we operated a modest facility, seemingly deemed
-                inconsequential by larger suppliers. Nonetheless, we faced numerous challenges,
-                including the scarcity of technical guidance to optimize chemical usage within our
-                processes. Fortunately, we encountered a dedicated chemical supplier who became our
-                invaluable mentor, guiding us towards effective solutions. As we overcame these
-                obstacles, we recognized the need to extend our assistance to others encountering
-                similar struggles. This marked the initial step towards broadening our impact,
-                offering technical support and delivering the necessary products to enhance
-                operational efficiency across diverse conditions, thereby alleviating the stress
-                faced by operators.
-              </p>
+            {/* Blog Post 2 */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+              <Image src="/2.png" alt="Settleability, Problem or Not?" width={600} height={300} className="w-full h-48 object-cover" />
+              <div className="flex-1 flex flex-col p-6">
+                <h2 className="text-lg font-bold text-gray-900 mb-2 heading-font">Settleability, Problem or Not?</h2>
+                <p className="text-gray-600 body-font text-sm mb-4 flex-1">Settleability Test – Interpretation One of the most useful and easy tests for operators to…</p>
+                <Button asChild className="primary-gold rounded-full px-6 py-2 font-medium self-start">
+                  <a href="/blog/settleability-problem-or-not">Read More</a>
+                </Button>
+              </div>
             </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 heading-font">
-                We Are The Creators You Can Trust For A Perfect Solution To All Your Needs.
-              </h3>
+            {/* Blog Post 3 */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+              <Image src="/3.png" alt="Nitrification – What's Needed?" width={600} height={300} className="w-full h-48 object-cover" />
+              <div className="flex-1 flex flex-col p-6">
+                <h2 className="text-lg font-bold text-gray-900 mb-2 heading-font">Nitrification – What's Needed?</h2>
+                <p className="text-gray-600 body-font text-sm mb-4 flex-1">Nitrification is the biological oxidation of ammonia nitrogen to nitrate and accounts for most ammonia…</p>
+                <Button asChild className="primary-gold rounded-full px-6 py-2 font-medium self-start">
+                  <a href="/blog/nitrification-whats-needed">Read More</a>
+                </Button>
+              </div>
+            </div>
+            {/* Blog Post 4 */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+              <Image src="/4.png" alt="Present Issues, Are Operators a Shrinking Resource?" width={600} height={300} className="w-full h-48 object-cover" />
+              <div className="flex-1 flex flex-col p-6">
+                <h2 className="text-lg font-bold text-gray-900 mb-2 heading-font">Present Issues, Are Operators a Shrinking Resource?</h2>
+                <p className="text-gray-600 body-font text-sm mb-4 flex-1">Compliance · Increased and expanding regulations (EPA and state) · Nutrient removal (improved operations typically…</p>
+                <Button asChild className="primary-gold rounded-full px-6 py-2 font-medium self-start">
+                  <a href="/blog/present-issues-are-operators-a-shrinking-resource">Read More</a>
+                </Button>
+              </div>
+            </div>
+            {/* Blog Post 5 */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+              <Image src="/5.png" alt="De-Nitrification, Only after Nitrification" width={600} height={300} className="w-full h-48 object-cover" />
+              <div className="flex-1 flex flex-col p-6">
+                <h2 className="text-lg font-bold text-gray-900 mb-2 heading-font">De-Nitrification, Only after Nitrification</h2>
+                <p className="text-gray-600 body-font text-sm mb-4 flex-1">De-nitrification is when facultative (common) treatment bacteria change nitrate (NO3) to (nitrogen gas (N), carbon…</p>
+                <Button asChild className="primary-gold rounded-full px-6 py-2 font-medium self-start">
+                  <a href="/blog/de-nitrification-only-after-nitrification">Read More</a>
+                </Button>
+              </div>
+            </div>
+            {/* Blog Post 6 */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+              <Image src="/6.png" alt="Knowing Your System, Nitrification as an Indicator?" width={600} height={300} className="w-full h-48 object-cover" />
+              <div className="flex-1 flex flex-col p-6">
+                <h2 className="text-lg font-bold text-gray-900 mb-2 heading-font">Knowing Your System, Nitrification as an Indicator?</h2>
+                <p className="text-gray-600 body-font text-sm mb-4 flex-1">Effective operation of your system begins with knowing your system. While two systems may be…</p>
+                <Button asChild className="primary-gold rounded-full px-6 py-2 font-medium self-start">
+                  <a href="/blog/knowing-your-system-nitrification-as-an-indicator">Read More</a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -215,10 +205,10 @@ export default function AboutPage() {
       <section className="py-16 bg-black text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 heading-font">
-            Need Help with Easier Solutions? We Are Experts!
+            Need Expert Water Treatment Guidance?
           </h2>
           <Button asChild className="primary-gold rounded-full px-8 py-3 text-lg font-medium">
-            <a href="/#contact">Contact Us</a>
+            <a href="/#contact">Contact Our Experts</a>
           </Button>
         </div>
       </section>
